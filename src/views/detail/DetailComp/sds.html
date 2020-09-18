@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+
+      let a = [101,201,301,401];
+
+      let c = 50;
+
+
+      function getIndex(arr,value){
+        let index;
+        index = arr.findIndex(item=>{
+          return item>c
+        })
+        index==-1?index=arr.length:''
+        return index
+      }
+
+      setInterval(()=>{
+        c+=50
+
+        console.log(getIndex(a,c))
+
+      },500)
+
+    </script>
+</body>
+</html>
